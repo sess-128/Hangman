@@ -34,7 +34,7 @@ public class Hangman {
         paintWordMask(mask);
         return mask;
     }
-    // [eqwww
+    // [eqwww  
     public static void paintWordMask(String[] wordWithLetters){
         Arrays.asList(wordWithLetters).forEach(System.out::print);
         System.out.println();
