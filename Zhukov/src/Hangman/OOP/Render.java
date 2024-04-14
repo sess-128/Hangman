@@ -1,5 +1,7 @@
 package Hangman.OOP;
 
+import java.util.Arrays;
+
 public class Render {
     public static final String ZERO_ERRORS ="-----------\n" +
                                             "||       |\n" +
@@ -44,7 +46,25 @@ public class Render {
             "||      / \\\n" +
             "----\n";
 
-    public static void renderer(){
-
+    public static void renderer(String[] mask){
+        switch (InputLetter.countErrors){
+            case 0:
+                System.out.println(ZERO_ERRORS); break;
+            case 1:
+                System.out.println(ONE_ERROR); break;
+            case 2:
+                System.out.println(TWO_ERRORS); break;
+            case 3:
+                System.out.println(THREE_ERRORS);break;
+            case 4:
+                System.out.println(FOUR_ERRORS);break;
+            case 5:
+                System.out.println(FIVE_ERRORS);break;
+            case 6:
+                System.out.println(SIX_ERRORS);break;
+        }
+        System.out.println("Кол-во ошибок: " + InputLetter.countErrors);
+        System.out.println("Использованные буквы: " + InputLetter.enteredLetters);
+        System.out.println(Arrays.toString(mask)+"\n");
     }
 }
